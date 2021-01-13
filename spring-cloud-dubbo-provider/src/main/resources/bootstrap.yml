@@ -1,0 +1,38 @@
+# Tomcat
+server:
+  port: 9210
+
+# Spring
+spring:
+  application:
+    # 应用名称
+    name: spring-cloud-dubbo-provider
+  profiles:
+    # 环境配置
+    active: dev
+  cloud:
+    # nacos配置
+    nacos:
+      discovery:
+        # 服务注册地址
+        server-addr: 127.0.0.1:8848
+      config:
+        # 配置中心地址
+        server-addr: 127.0.0.1:8848
+        # 配置文件格式
+        file-extension: yml
+        # 共享配置
+        sharedConfigs: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+
+# dubbo配置
+dubbo:
+  scan:
+    base-packages: com.example.nacos
+  registry:
+    address: nacos://127.0.0.1:8848
+  protocols:
+    dubbo:
+      name: dubbo
+      port: 20883
+  provider:
+    timeout: 5000
