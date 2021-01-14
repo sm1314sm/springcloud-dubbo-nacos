@@ -33,6 +33,6 @@ dubbo:
   protocols:
     dubbo:
       name: dubbo
-      port: 20883
+      port: 20882
   provider:
     timeout: 5000
