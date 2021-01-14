@@ -6,6 +6,6 @@ import org.apache.dubbo.config.annotation.DubboService;
 public class ProductServiceImpl implements ProductService {
     @Override
     public String getProductInfo(String msg) {
-        return "hello,"+msg+",给我来100头马马哈哈！";
+        return "hello," + msg + ",给我来100头马马哈哈！";
     }
 }
