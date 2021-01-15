@@ -6,7 +6,7 @@ server:
 spring:
   application:
     # 应用名称
-    name: spring-cloud-dubbo-provider
+    name: spring-cloud-dubbo-nacos
   profiles:
     # 环境配置
     active: dev
@@ -34,5 +34,3 @@ dubbo:
     dubbo:
       name: dubbo
       port: 20882
-  provider:
-    timeout: 5000
