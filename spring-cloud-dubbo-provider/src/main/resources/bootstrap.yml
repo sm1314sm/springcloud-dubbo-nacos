@@ -27,10 +27,14 @@ spring:
 # dubbo配置
 dubbo:
   scan:
+    # 接口地址
     base-packages: com.example.nacos
   registry:
+    # 注册中心地址
     address: nacos://127.0.0.1:8848
   protocols:
     dubbo:
+      # 协议名称
       name: dubbo
+      # 端口号
       port: 20882
