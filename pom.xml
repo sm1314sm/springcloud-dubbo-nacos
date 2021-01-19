@@ -15,12 +15,15 @@
         <spring-boot.version>2.3.4.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.3.RELEASE</spring-cloud-alibaba.version>
+        <spring-boot-admin.version>2.3.0</spring-boot-admin.version>
     </properties>
 
     <modules>
+        <module>spring-cloud-admin</module>
         <module>spring-cloud-dubbo-api</module>
         <module>spring-cloud-dubbo-consumer</module>
         <module>spring-cloud-dubbo-provider</module>
+        <module>spring-cloud-gateway</module>
     </modules>
 
     <dependencyManagement>
@@ -47,6 +50,12 @@
                 <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>${spring-boot-admin.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
