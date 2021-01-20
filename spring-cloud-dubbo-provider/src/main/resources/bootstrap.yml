@@ -23,32 +23,3 @@ spring:
         file-extension: yml
         # 共享配置
         sharedConfigs: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
-
-# dubbo配置
-dubbo:
-  scan:
-    # 接口地址
-    base-packages: com.example.nacos
-  registry:
-    # 注册中心地址
-    address: nacos://127.0.0.1:8848
-  protocols:
-    dubbo:
-      # 协议名称
-      name: dubbo
-      # 端口号
-      port: 20882
-
-# 监控服务配置
-management:
-  endpoint:
-    shutdown:
-      #开启端点
-      enabled: true
-    health:
-      show-details: always
-  endpoints:
-    web:
-      exposure:
-        #开启所有接口
-        include: "*"
