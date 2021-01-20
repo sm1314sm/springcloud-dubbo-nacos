@@ -38,3 +38,17 @@ dubbo:
       name: dubbo
       # 端口号
       port: 20884
+
+# 监控服务配置
+management:
+  endpoint:
+    shutdown:
+      #开启端点
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        #开启所有接口
+        include: "*"

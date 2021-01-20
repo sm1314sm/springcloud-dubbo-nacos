@@ -39,3 +39,17 @@ spring:
             groupId: DEFAULT_GROUP
             data-type: json
             rule-type: flow
+
+# 监控服务配置
+management:
+  endpoint:
+    shutdown:
+      #开启端点
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        #开启所有接口
+        include: "*"

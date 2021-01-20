@@ -22,3 +22,9 @@ spring:
         file-extension: yml
         # 共享配置
         sharedConfigs: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+  security:
+    user:
+      # 用户名
+      name: gehx
+      # 账号
+      password: 100714
